@@ -34,10 +34,13 @@ jobs:
           condarc: |
             channels:
               - conda-forge
+          init-shell: >-
+            bash
 
       # Build the book
       - name: Build the book
         run: jupyter-book build ./Webinar2-EOPF-Sample-Service.ipynb
+        shell: bash -el {0}
 
       # Upload the book's HTML as an artifact
       - name: Upload artifact
