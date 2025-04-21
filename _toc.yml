@@ -1,0 +1,4 @@
+format: jb-book
+root: Webinar2-EOPF-Sample-Service-Single-file
+chapters:
+- file: Webinar2-EOPF-Sample-Service-Multiple-files

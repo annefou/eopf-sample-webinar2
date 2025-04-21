@@ -39,14 +39,14 @@ jobs:
 
       # Build the book
       - name: Build the book
-        run: jupyter-book build ./Webinar2-EOPF-Sample-Service.ipynb
+        run: jupyter-book build ./
         shell: bash -el {0}
 
       # Upload the book's HTML as an artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./_build/_page/Webinar2-EOPF-Sample-Service/html"
+          path: "./_build/html"
 
       # Deploy the book's HTML to GitHub Pages
       - name: Deploy to GitHub Pages
