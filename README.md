@@ -1,4 +1,4 @@
-# eopf-sample-webinar2
+# Welcome to EOPF Webinar 2!
 
 Welcome to the hands-on materials for the **second EOPF Sample Service Webinar**.
 
