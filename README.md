@@ -1,6 +1,8 @@
 # Welcome to EOPF Webinar 2!
 
-Welcome to the hands-on materials for the **second EOPF Sample Service Webinar**.
+[![Launch EOPF JupyterHub](https://img.shields.io/badge/try_with-eopf_jupyter-03c7ff?style=flat)](https://jupyterhub.user.eopf.eodc.eu/hub)
+
+Here, you'll find training materials for the **second EOPF Sample Service Webinar**, designed to help you explore and experiment with the sample services.
 
 ## Accessing the Webinar Environment
 
