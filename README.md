@@ -40,7 +40,6 @@ Follow these steps:
 1. In the launcher interface, locate the field for selecting a custom Docker image.
 2. Enter the following image:
 
-
    ```
    quay.io/pangeo/pangeo-notebook:2025.01.24
    ```
@@ -59,10 +58,10 @@ Once your environment is running, click on the **Git icon** in the left sidebar.
 
 Choose **Clone a Repository**, then paste the following URL to clone the webinar materials into your workspace:
 
-
 ```
 https://github.com/EOPF-Sample-Service/eopf-sample-webinar2.git
 ```
+
 ![Screenshot: Clone Repository](image/clone.png)
 
 ---
@@ -70,12 +69,15 @@ https://github.com/EOPF-Sample-Service/eopf-sample-webinar2.git
 ## Launching the Notebooks
 
 Navigate to the following directory:
+
 ```
 /eopf-sample-webinar2/
 ```
+
 ![Screenshot: Navigation Step 1](image/navigate1.png)
 
 Open one of the notebooks to begin. For example:
+
 - `Webinar2-EOPF-Sample-Service-Single-file.ipynb`
 
 ![Screenshot: Navigation Step 2](image/navigate2.png)

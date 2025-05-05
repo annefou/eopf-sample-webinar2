@@ -1,5 +1,5 @@
 format: jb-book
 root: README
 chapters:
-- file: Webinar2-EOPF-Sample-Service-Single-file
-- file: Webinar2-EOPF-Sample-Service-Multiple-files
+  - file: Webinar2-EOPF-Sample-Service-Single-file
+  - file: Webinar2-EOPF-Sample-Service-Multiple-files
