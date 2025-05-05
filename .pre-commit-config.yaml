@@ -1,0 +1,66 @@
+# pre-commit is a tool to perform a predefined set of tasks manually and/or
+# automatically before git commits are made.
+#
+# Config reference: https://pre-commit.com/#pre-commit-configyaml---top-level
+#
+# Common tasks
+#
+# - Run on all files:   pre-commit run --all-files
+# - Register git hooks: pre-commit install --install-hooks
+#
+default_language_version:
+  python: python3
+
+ci:
+  autoupdate_schedule: monthly
+
+exclude: "code_of_conduct.md|rule_of_participation.md"
+
+repos:
+  # Autoformat and lint Python code (exclude notebooks from ruff-format)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.6
+    hooks:
+      - id: ruff
+        types_or: [python, jupyter]
+        args: ["--fix", "--show-fixes"]
+      - id: ruff-format
+        types_or: [python] # Exclude jupyter
+        exclude: \.ipynb$
+
+  # Autoformat: markdown, yaml, javascript
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+
+  # Autoformat and linting, misc. details
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: requirements-txt-fixer
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+
+  # Black for Python files
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 24.8.0
+    hooks:
+      - id: black
+        types: [python]
+
+  # Black for Jupyter notebooks
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 24.8.0
+    hooks:
+      - id: black-jupyter
+        types: [jupyter]
+
+  # NBQA for notebook-specific black formatting
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.9.0
+    hooks:
+      - id: nbqa-black
+        args: [--nbqa-mutate]
+        types: [jupyter]
